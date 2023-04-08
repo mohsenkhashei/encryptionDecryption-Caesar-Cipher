@@ -13,7 +13,7 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <link
       rel="stylesheet"
-      href="./assets/bootstrap.min.css"
+      href="../assets/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
@@ -25,7 +25,11 @@
       <div class="container">
         <div class="row">
           <div class="col-sm">
-            <h1>!</h1>
+            <br />
+            <h5>
+              The Encryption and Decryption app with support of 4 language!
+            </h5>
+            <br />
           </div>
         </div>
       </div>
@@ -109,8 +113,8 @@
       const form = document.querySelector("#myForm");
       const submitBtn = document.querySelector("#submitBtn");
       const message = document.querySelector("#message");
-      textInputField = document.querySelector("#text");
-      processInputSelect = document.querySelector("#processType");
+      let textInputField = document.querySelector("#text");
+      let processInputSelect = document.querySelector("#processType");
       textInputField.addEventListener("input", function () {
         this.value = this.value.toUpperCase();
         processInputSelect.selectedIndex = 0;

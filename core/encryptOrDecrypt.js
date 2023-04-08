@@ -74,7 +74,7 @@ module.exports = function startProcess(data) {
   }
   console.log(rs);
   let stringRs = "";
-  for (j = 0; j < rs.length; j++) {
+  for (let j = 0; j < rs.length; j++) {
     if (rs[j] == undefined) {
       stringRs += " ";
     } else {

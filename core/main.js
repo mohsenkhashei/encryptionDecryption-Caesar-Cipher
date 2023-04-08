@@ -12,7 +12,7 @@ const createWindow = () => {
     },
   });
 
-  win.loadFile("index.html");
+  win.loadFile("./core/index.html");
   win.webContents.openDevTools();
   win.on("closed", () => {
     win = null;
@@ -56,12 +56,13 @@ ipcMain.on("form-submission", (event, data) => {
       language = "English";
   }
   let template = `
+  <div class="alert alert-info" ><p>input: ${dataToSend.shiftCount}:${dataToSend.processType}:${dataToSend.language}:${dataToSend.text}</p></div>
 <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Done!</h4>
-  <p>${processType}ing the "<b>${dataToSend.text}</b>" text with shift count of <b>${dataToSend.shiftCount}</b> in <b>${language}</b></p>
+  <p>${processType}ing the "<b>${dataToSend.text}</b>" text with shift count of <b>${dataToSend.shiftCount}</b> in <b>${language}</b> language</p>
   <hr>
   <p class="mb-0">${processType}ed text is: <b>${startProcess}</b></p>
 </div>`;
-  const result = { message: template };
-  event.reply("form-submission-reply", result);
+  event.sender.send("form-submission-reply", { message: template });
+  // event.reply("form-submission-reply", { message: template });
 });
