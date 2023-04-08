@@ -1,7 +1,7 @@
 {
   "name": "textencryptdecrypt",
   "version": "1.0.0",
-  "description": "",
+  "description": "this applicaton is for educational purpose. encrypt and decrypt the text",
   "main": "./core/main.js",
   "config": {
     "forge": "./forge.config.js"

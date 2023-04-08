@@ -43,7 +43,7 @@ module.exports = {
       config: {
         options: {
           maintainer: "Mohsen Khashei",
-          homepage: "https://myapp.com",
+          description: "My Electron app",
         },
       },
     },
