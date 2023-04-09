@@ -14,9 +14,9 @@ Caesar Cipher is one of the simplest and most widely known encryption techniques
 - Linux
 - Windows
 
-### Files compatible for platfrom are available in zip files under [executable](https://github.com/mohsenkhashei/encryptionDecryption-Caesar-Cipher/tree/main/core) folder
+### Files compatible for platfrom are available in zip files under [executable](https://github.com/mohsenkhashei/encryptionDecryption-Caesar-Cipher/tree/main/executable) folder
 
-> Just Download the Compatible file of your operating system then:
+> Just Download the Compatible file of your operating system and open that then:
 
 - insert your text
 - select your prefered language
