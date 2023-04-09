@@ -6,23 +6,42 @@
   "config": {
     "forge": "./forge.config.js"
   },
+  "build": {
+    "appId": "encryptOrDecryptID",
+    "icon": "./assets/",
+    "mac": {
+      "category": "your.app.category.type",
+      "target": "7z"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
   "scripts": {
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "author": "",
+  "author": "Mohsen Khashei",
   "license": "ISC",
   "devDependencies": {
-    "electron-prebuilt-compile": "4.0.0",
-    "@electron-forge/cli": "^6.1.0",
+    "@electron-forge/cli": "^6.1.1",
     "@electron-forge/maker-deb": "^6.1.0",
     "@electron-forge/maker-dmg": "^6.1.1",
     "@electron-forge/maker-rpm": "^6.1.0",
     "@electron-forge/maker-squirrel": "^6.1.0",
     "@electron-forge/maker-zip": "^6.1.0",
-    "electron": "^24.0.0"
+    "electron": "^24.0.0",
+    "electron-forge": "^5.2.4",
+    "electron-packager": "^17.1.1",
+    "electron-prebuilt-compile": "8.2.0",
+    "electron-builder": "^23.6.0"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"

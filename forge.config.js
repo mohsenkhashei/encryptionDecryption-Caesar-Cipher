@@ -31,6 +31,10 @@ module.exports = {
     {
       name: "@electron-forge/maker-squirrel",
       config: {
+        config: {
+          authors: "Mohsenkhashei",
+          description: "Encryption Decryption App",
+        },
         name: "EncOrDecByMohsen",
         exe: "EncOrDecByMohsen.exe",
         setupExe: "EncOrDecByMohsen.exe",
