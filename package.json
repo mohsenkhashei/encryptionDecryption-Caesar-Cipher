@@ -1,49 +1,76 @@
 {
-  "name": "textencryptdecrypt",
-  "version": "1.0.0",
-  "description": "this applicaton is for educational purpose. encrypt and decrypt the text",
-  "main": "./core/main.js",
-  "config": {
-    "forge": "./forge.config.js"
-  },
-  "build": {
-    "appId": "encryptOrDecryptID",
-    "icon": "./assets/",
-    "mac": {
-      "category": "your.app.category.type",
-      "target": "7z"
-    },
-    "win": {
-      "target": "portable"
-    },
-    "linux": {
-      "target": "AppImage"
-    }
-  },
-  "scripts": {
-    "start": "electron-forge start",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
-  },
-  "author": "Mohsen Khashei",
-  "license": "ISC",
-  "devDependencies": {
-    "@electron-forge/cli": "^6.1.1",
-    "@electron-forge/maker-deb": "^6.1.0",
-    "@electron-forge/maker-dmg": "^6.1.1",
-    "@electron-forge/maker-rpm": "^6.1.0",
-    "@electron-forge/maker-squirrel": "^6.1.0",
-    "@electron-forge/maker-zip": "^6.1.0",
-    "electron": "^24.0.0",
-    "electron-forge": "^5.2.4",
-    "electron-packager": "^17.1.1",
-    "electron-prebuilt-compile": "8.2.0",
-    "electron-builder": "^23.6.0"
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
-  }
+	"name": "textencryptdecrypt",
+	"version": "1.0.0",
+	"description": "this applicaton is for educational purpose. encrypt and decrypt the text",
+	"main": "./core/main.js",
+	"build": {
+		"appId": "encryptOrDecryptID",
+		"directories": {
+			"output": "build"
+		},
+		"mac": {
+			"target": [
+				{
+					"target": "dmg",
+					"arch": [
+						"x64"
+					]
+				}
+			],
+			"icon": "assets/icon.png",
+			"category": "public.app-category.education"
+		},
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64"
+					]
+				}
+			],
+			"icon": "assets/icon.png"
+		},
+		"linux": {
+			"target": [
+				{
+					"target": "deb",
+					"arch": [
+						"x64"
+					]
+				},
+				{
+					"target": "AppImage",
+					"arch": [
+						"x64"
+					]
+				}
+			],
+			"icon": "assets/icon.png",
+			"maintainer": "Mohsen",
+			"vendor": "Mohsen",
+			"synopsis": "textencryptdecrypt",
+			"description": "textencryptdecrypt",
+			"category": "education",
+			"mimeTypes": ""
+		}
+	},
+	"scripts": {
+		"start": "electron-forge start",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder",
+		"build": "electron-builder",
+		"build:mac": "electron-builder --mac",
+		"build:win": "electron-builder --win",
+		"build:linux": "electron-builder --linux"
+	},
+	"author": "Mohsen Khashei",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^24.0.0",
+		"electron-builder": "^23.6.0"
+	}
 }

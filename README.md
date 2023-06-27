@@ -10,18 +10,23 @@ Caesar Cipher is one of the simplest and most widely known encryption techniques
 
 ### can be used in 3 main desktop platforms:
 
-- MacOS
-- Linux
-- Windows
+-   MacOS
+-   Linux
+-   Windows
 
-### Files compatible for platfrom are available in zip files under [executable](https://github.com/mohsenkhashei/encryptionDecryption-Caesar-Cipher/tree/main/executable) folder
+## For Use
+
+Due to limitation of github, uploaded the executable files [here](https://drive.google.com/drive/folders/179x-URa2QbN3w7DL2l2kXVIIwcMf9dtC?usp=sharing) you can download the executable files for your OS. <br />
+`.dmg` for mac <br />
+`.exe` for windows <br />
+`.AppImage` for linux`<br />`.deb` for linux` <br />
 
 > Just Download the Compatible file of your operating system and open that then:
 
-- insert your text
-- select your prefered language
-- select process type Encryptin or Decryption
-- set prefer shift count
+-   insert your text
+-   select your prefered language
+-   select process type Encryptin or Decryption
+-   set prefer shift count
 
 <br/>
  =========================================================================
