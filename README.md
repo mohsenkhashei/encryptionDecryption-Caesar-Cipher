@@ -19,9 +19,10 @@ Caesar Cipher is one of the simplest and most widely known encryption techniques
 Due to limitation of github, uploaded the executable files [here](https://drive.google.com/drive/folders/179x-URa2QbN3w7DL2l2kXVIIwcMf9dtC?usp=sharing) you can download the executable files for your OS. <br />
 `.dmg` for mac <br />
 `.exe` for windows <br />
-`.AppImage` for linux`<br />`.deb` for linux` <br />
+`.AppImage` for linux<br />
+`.deb` for linux<br />
 
-> Just Download the Compatible file of your operating system and open that then:
+> <b>Just Download the Compatible file of your operating system and open that then:</b>
 
 -   insert your text
 -   select your prefered language
@@ -45,13 +46,30 @@ Due to limitation of github, uploaded the executable files [here](https://drive.
 
 <br />
 
-## For Developing Usage:
+## For Developing
 
-in the root of Application:
-`npm install`
-<br />
-for run the app locally:
-`npm run start`
-<br />
-for generate new executable file:
-`electron-builder -mwl`
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+git clone https://github.com/mohsenkhashei/encryptionDecryption-Caesar-Cipher
+# Go into the repository
+cd encryptionDecryption-Caesar-Cipher
+# Install dependencies
+npm install
+# Run the app
+npm start
+```
+
+Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+
+## For Packaging
+
+```bash
+# generating mac version
+npm run build:mac
+# generating linux version
+npm run build:linux
+# generating windows version
+npm run build:win
+```
